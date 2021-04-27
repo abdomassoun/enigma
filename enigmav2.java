@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 import coding.dodo.enigma;
 import sun.java2d.pipe.AlphaColorPipe;
-
+import java.util.Scanner;
 public class enigmav2 {
 
 	
@@ -15,21 +16,33 @@ public class enigmav2 {
 
 	
 	public static void main(String[] args) {
-		//int [] array = {1,2,4,3,4,1,0,0,2,0,4,2,4,3};
-		int n=20,m=26,k=2;
-		String text="enigma ";//n2(array);
-		int[] ab=n1(text);
+		Scanner scan=new Scanner(System.in);
+		Scanner scan2=new Scanner(System.in);
+		System.out.println("code for enigma machine: chose you wanna encrept text or dencrep it;enter 1 or 2 ");
+		int casee=scan.nextInt();
+		System.out.println("enter the posistion of firs rotuor and prees enter key .the same thing with scend qnd theerd");
+		int n=scan.nextInt();
+		int m=scan.nextInt();
+		int k=scan.nextInt();
+		System.out.println("enter your text");
+		String text=scan2.nextLine();
+    if(casee==1) {
+    	
+    	int[] array=inttostring(text);
+    System.out.println(stringtoint(rutor (array ,n,m,k))); 
+    }else {
+    	
+    	int[] array=inttostring(text);
+    	 
+    	 System.out.println(stringtoint(code(array, n,m,k)));
+    }
 		
-		
-              // for(int j=0;j<array.length;j++) { System.out.print(array[j]); }System.out.println("");
-            	int [] g=rutor (ab ,n,m,k);System.out.println(n2(g)); 
-               // for(int i=0;i<g.length;i++) {System.out.print(g[i]+"."); }System.out.println("");
-                int [] dodo= code(g, n,m,k);
-                
-                //for( int u=0;u<dodo.length;u++){ System.out.print(dodo[u]+".");
-                
+           
+            	 
+              
                
-            System.out.println(n2(dodo));
+           
+           
              
 	}
 
@@ -266,7 +279,7 @@ public class enigmav2 {
 	}
 
 	
-	public static int[] n1(String string) {
+	public static int[] inttostring (String string) {
 		int [] array=new int[string.length()];
 		String text="";
 		//String text="";
@@ -291,7 +304,7 @@ public class enigmav2 {
 		//System.out.println("gg"+text+"gg");
 		return array;
 	}
-	public static String n2(int []array) {
+	public static String stringtoint (int []array) {
 		String string="";
 		for(int i=0;i<array.length;i++) {
 			string=string+chars[array[i]];}

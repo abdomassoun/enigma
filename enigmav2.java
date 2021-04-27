@@ -18,7 +18,7 @@ public class enigmav2 {
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
 		Scanner scan2=new Scanner(System.in);
-		System.out.println("code for enigma machine: chose you wanna encrept text or dencrep it;enter 1 or 2 ");
+		System.out.println("code for enigma machine: chose you wanna encrept text or decode it;enter 1 or 2 ");
 		int casee=scan.nextInt();
 		System.out.println("enter the posistion of firs rotuor and prees enter key .the same thing with scend qnd theerd");
 		int n=scan.nextInt();
